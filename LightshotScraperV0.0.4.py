@@ -122,6 +122,8 @@ def Process():
                 #Sparar bilden i filen.
                 try:
                     handler.write(imagelink.content)
+
+                #Om det inte fungerar är bildlänken korrupt, och programmet tar sedan bort bilden och återställer värdena på programmet.
                 except Exception:
                     print("Bildlänk var inte verklig. Tar bort bild...")
                     handler.close()
@@ -157,6 +159,7 @@ def Process():
                     print("Kunde inte ta bort korrupt fil!")
                     raise Exception
 
+            #Kontrollerar om bilden är imgurs "image removed"-bild genom att kolla storleken på bilden.
             if korrupt == 0:
                 print("Kontrollerar om bild redan är borttagen...")
                 try:
@@ -171,9 +174,6 @@ def Process():
                 except Exception:
                     print("Kunde inte ta bort borttagen fil!")
                     raise Exception
-
-
-            #Om någonting går fel i processen, försök igen
 
             #Vänta i 2 sekunder för att förhindra att bli bannad.
             time.sleep(2)
