@@ -12,13 +12,13 @@ import os
 imgpath = input("Var ska bilderna sparas? (Enter för att spara i Sparade Bilder)").strip() or "C:\\Users\\%username%\\Pictures\\Saved Pictures"
 
 def Scraper():
-    
+    pass
 
 def imageHandler():
     pass
 
 
 
-Bz_iVlFAetPw
-0IhIfZmMIaeK
-DzkuQXuxfW5-
+#   Bz_iVlFAetPw
+#   0IhIfZmMIaeK
+#   DzkuQXuxfW5-
